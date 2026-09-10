@@ -1,0 +1,7 @@
+name: phase0-echo
+on: [push, pull_request]
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "event=${{ github.event_name }} actor=${{ github.actor }} ref=${{ github.ref }}"
